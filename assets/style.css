@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF7E9;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* NAVIGATION */
+header {
+    display: inline;
+}
+
+nav {
+    padding: 5px;
+    border-bottom: 1px solid #0003;
+    background-color: #5F9DF7;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: #FF731D;
+    text-shadow: 2px 1px #FF731D;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+}
+
+
+/* JUMBOTRON */
+.jumbotron {
+    height: 550px;
+    text-align: center;
+    background-image: url("images/pantai-pangandaran.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    color: #1746A2;
+}
+
+.title {
+    margin-top: 150px;
+    font-weight: 900;
+    font-size: 62px;
+    text-shadow: 2px 2px #1746A2;
+}
+
+.desc {
+    width: 90%;
+    margin-left: 70px;
+    font-weight: 700;
+    font-size: 24px;
+    -webkit-text-stroke: 1px #FFF7E9;
+}
+
+/* CONTENT */
+#content {
+    text-align: center;
+}
+
+article > h2 {
+    font-size: 38px;
+    color: #1746A2;
+}
+
+article > p {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#geografi {
+    width: 90%;
+    margin-left: 75px;
+}
+
+#geografi p {
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 20px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card h4 {
+    font-size: larger;
+    font-weight: 900;
+    color: #1746A2;
+    margin: 10px;
+}
+.card p {
+    text-align: justify;
+    padding: 0px 20px 20px 20px;
+    margin: 0;
+}
+
+.card:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 20px rgba(38, 38, 38, 0.2);
+    top: -4px;
+}
+
+.card::before {
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+}
+
+.card:hover:before {
+    transform: scale(2.15);
+}
+
+.container-slide {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img{
+    width: 100%;
+    height: 600px;
+}
+
+.caption {
+    color: #000000;
+    font-weight: 700;
+    font-size: 38px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(201, 200, 200);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #5c5c5c;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.profile {
+    background-color: aliceblue;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 10px;
+    filter: contrast(120%);
+}
+
+.profile-desc header {
+    text-align: center;
+}
+
+.profile section {
+    justify-content: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.github {
+	background-color: #FF731D;
+    border: 1px solid #FF731D;
+	border-radius: 5px;
+	color: white;
+	font-weight: 500;
+    width: 100px;
+    height: 40px;
+    transition-duration: 1s;
+}
+
+.github:hover {
+    background-color: transparent;
+    color: #FF731D;
+}
+
+.instagram {
+	background-color: transparent;
+	color: #FF731D;
+    border: 1px solid #FF731D;
+	border-radius: 5px;
+    font-weight: 500;
+    width: 100px;
+    height: 40px;
+    transition-duration: 1s;
+}
+
+.instagram:hover {
+    background-color: #FF731D;
+    color: white;
+}
+
+.skill {
+	text-align: left;
+	padding: 15px;
+}
+
+.skill ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skill ul li {
+    color: #FF731D;
+	border: 1px solid #FF731D;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}
+
+footer {
+    background-color: #5F9DF7;
+    height: 70px;
+}
+
+footer > p {
+    text-align: center;
+    padding-top: 25px;
+    font-weight: 700;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 992px) {
+    .title {
+        width: 100%;
+        padding: 0;
+    }
+
+    .desc {
+        width: 100%;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    #geografi {
+        margin: auto;
+    }
+
+    article p {
+        width: 90%;
+        margin-left: 25px;
+    }
+
+    .card p {
+        margin-left: 20px;
+    }
+    .slide img {
+        height: 600px;
+    }
+
+    aside {
+        margin: auto;
+    }
+
+    .skill {
+        margin-left: 45px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .slide img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        width: 100%;
+        padding: 0;
+    }
+
+    .desc {
+        width: 90%;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    #geografi {
+        margin: auto;
+    }
+
+    article p {
+        width: 90%;
+        margin-left: 25px;
+    }
+
+    .slide img {
+        height: 350px;
+    }
+    
+    aside {
+        margin: auto;
+    }
+
+    .skill {
+        margin-left: 45px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .title {
+        width: 100%;
+        padding: 0;
+        font-size: 52px;
+    }
+}
